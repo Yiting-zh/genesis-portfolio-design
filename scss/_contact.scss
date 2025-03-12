@@ -1,0 +1,72 @@
+@use 'variables' as *;
+@use 'global' as *;
+@use 'layout' as *; 
+
+
+
+
+
+.text4 {
+  @extend .section-container;
+  margin-top: 100px;
+}
+
+.text4-left {
+  @extend .section-left;
+}
+
+.text4-left h1 {
+  font-weight: bold;
+  font-size: $font-size-h1;
+  line-height: $line-height-m;
+  margin-bottom: 30px;
+}
+
+.text4-left p {
+  font-size: $font-size-p;
+  line-height: $line-height-s;
+}
+
+
+.text4-right {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; 
+  width: 70%;
+}
+
+
+.input-field {
+  width: 100%;
+  font-size: $font-size-p;
+  color: $text-color; 
+  opacity: 0.6;
+  font-weight: bold;
+  border: none;
+  border-bottom: 1px solid #979797; 
+  outline: none;
+}
+
+
+.map {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  @include container-padding;
+  margin-bottom: 100px;
+}
+
+.map img{
+  width: calc(100vw - 250px);
+  height: auto;
+  margin-top: 60px;
+  margin-bottom: $spacing-l;
+  object-fit: cover;
+}

@@ -1,0 +1,93 @@
+@use 'variables' as *;
+@use 'global' as *;
+@use 'layout' as *;
+
+
+.text3 {
+  @extend .section-container;
+  margin-top: 100px;
+}
+
+.text3-left {
+  @extend .section-left;
+}
+
+.text3-left h1 {
+  font-weight: bold;
+  font-size: $font-size-h1;
+  line-height: $line-height-m;
+  margin-bottom: 30px;
+}
+
+.text3-left p {
+  font-size: $font-size-p;
+  line-height: $line-height-s;
+}
+
+.text3-right {
+  display: grid;
+  gap: 19px;
+  max-width: 335px;
+  
+}
+
+.text3-right-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px; 
+  border-bottom: 1px solid #D8D8D8; 
+  gap: 77px;
+}
+
+.right-title {
+  font-size: 18px;
+  font-weight: normal;
+  color: $text-color;
+  opacity: 0.5;
+}
+
+
+.right-name {
+  font-weight: bold;
+}
+
+
+
+
+
+.details-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  @include container-padding;
+}
+
+.details-pic {
+  width: calc(100vw - 250px);
+  height: auto;
+  margin-top: 60px;
+  margin-bottom: $spacing-l;
+  object-fit: cover;
+}
+
+.details-text {
+  @include container-padding;
+  width: 100vw;
+  height: auto;
+
+}
+
+
+.details-text p {
+  font-size: $font-size-p;
+  line-height: $line-height-s;
+  color: $text-color;
+}
+
+
+.details-pictures {
+  margin-top: $spacing-l;
+  margin-bottom: 132px;
+  @extend .section-container 
+}

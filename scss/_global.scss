@@ -1,0 +1,25 @@
+@use 'variables' as *;
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-stack;
+  font-size: $font-size-p;
+  line-height:  26px; 
+  color: $text-color;
+  background-color: $bg-color;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $text-color;
+  
+}
+

@@ -1,0 +1,111 @@
+@use 'variables' as *;
+@use 'global' as *;
+
+header{
+  width: 100vw;
+  height: auto;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: $global-margin;
+  padding-right: $global-margin;
+  height: auto;
+  margin-top: 60px;
+}
+
+header nav ul{
+  list-style: none;
+  display: flex;
+  gap: $spacing-m;
+}
+
+
+footer {
+  width: 100vw;
+  height: auto;
+}
+
+footer nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: $global-margin;
+  padding-right: $global-margin;
+  height: auto;
+}
+
+.links {
+  display: flex;
+  gap: 95px;
+  list-style: none;
+
+}
+
+.links ul {
+  list-style: none;
+  display: flex;
+  gap: $spacing-m;
+}
+
+
+
+
+
+
+
+
+
+
+.section-container {
+  display: flex;
+  width: 100vw;
+  padding-left: 125px;
+  padding-right: 125px;
+  justify-content: space-between;
+}
+
+.section-left {
+  width: 50%;
+  height: auto;
+}
+
+.section-right {
+  display: flex;
+  align-items: self-start;
+  justify-content: flex-end;
+}
+
+
+
+
+
+
+
+@mixin grid-layout($columns, $gap: 30px) {
+  display: grid;
+  gap: $gap;
+  grid-template-columns: $columns;
+}
+
+
+@mixin container-padding {
+  padding-left: $global-margin;
+  padding-right: $global-margin;
+}
+
+
+@mixin border-top {
+  border-top: 1px solid #D8D8D8;
+  padding-top: 16px;
+  margin-top: 16px;
+}
+
+@mixin border-bottom {
+  border-bottom: 1px solid #D8D8D8;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  min-height: 190px;
+}
