@@ -8,7 +8,7 @@
 
 .text4 {
   @extend .section-container;
-  margin-top: 100px;
+
 }
 
 .text4-left {
@@ -55,18 +55,19 @@ form {
 }
 
 
+
+
 .map {
   width: 100vw;
   display: flex;
   justify-content: center;
   @include container-padding;
-  margin-bottom: 100px;
 }
 
-.map img{
+.map iframe {
   width: calc(100vw - 250px);
-  height: auto;
+  height: 450px;
   margin-top: 60px;
   margin-bottom: $spacing-l;
-  object-fit: cover;
+  border: none;
 }
