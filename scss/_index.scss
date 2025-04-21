@@ -5,8 +5,7 @@
 
 .text {
   @extend .section-container;
-  margin-top: 100px;
-  margin-bottom: 100px;
+
 }
 
 .text-left {
@@ -30,8 +29,7 @@
 
 .text2 {
   @extend .section-container;
-  margin-top: 100px;
-  margin-bottom: 100px;
+
 }
 
 .text2-left {
@@ -108,7 +106,7 @@
 
 .grid {
   @include container-padding;
-  margin-bottom: 125px;
+
   @include grid-layout(3fr 2fr 2fr 1fr);
   justify-content: center;
   align-items: self-start;

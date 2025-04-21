@@ -23,6 +23,11 @@ a:hover {
   color: red;
 }
 
+a:hover {
+  color: #4A4FF2;
+  text-decoration: underline;
+}
+
 header {
   width: 100vw;
   height: auto;
@@ -73,7 +78,7 @@ footer nav {
 .section-container, .text4, .text3, .details-pictures, .text, .text2 {
   display: flex;
   width: calc(100vw - 250px);
-  margin: 0 auto;
+  margin: 50px auto;
   padding: 0 20px;
   justify-content: space-between;
 }
@@ -89,11 +94,6 @@ footer nav {
   justify-content: flex-end;
 }
 
-.text {
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-
 .text-left {
   line-height: 60px;
 }
@@ -105,11 +105,6 @@ footer nav {
 .text-right p {
   font-style: italic;
   font-size: 18px;
-}
-
-.text2 {
-  margin-top: 100px;
-  margin-bottom: 100px;
 }
 
 .text2-left {
@@ -191,7 +186,6 @@ footer nav {
 .grid {
   padding-left: 125px;
   padding-right: 125px;
-  margin-bottom: 125px;
   display: grid;
   gap: 30px;
   grid-template-columns: 3fr 2fr 2fr 1fr;
@@ -304,10 +298,6 @@ footer nav {
   opacity: 0.6;
 }
 
-.text3 {
-  margin-top: 100px;
-}
-
 .text3-left h1 {
   font-weight: bold;
   font-size: 40px;
@@ -378,11 +368,6 @@ footer nav {
 
 .details-pictures {
   margin-top: 45px;
-  margin-bottom: 132px;
-}
-
-.text4 {
-  margin-top: 100px;
 }
 
 .text4-left h1 {
@@ -411,14 +396,14 @@ form {
 }
 
 .input-field {
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 4px;
-  transition: all 0.2s ease;
-}
-.input-field:hover, .input-field:focus {
-  border-color: #007BFF;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  width: 100%;
+  font-size: 16px;
+  color: #111111;
+  opacity: 0.6;
+  font-weight: bold;
+  border: none;
+  border-bottom: 1px solid #979797;
+  outline: none;
 }
 
 .map {
@@ -427,16 +412,14 @@ form {
   justify-content: center;
   padding-left: 125px;
   padding-right: 125px;
-  margin-bottom: 100px;
 }
 
-.map img {
+.map iframe {
   width: calc(100vw - 250px);
-  height: auto;
+  height: 450px;
   margin-top: 60px;
   margin-bottom: 45px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  border: none;
 }
 
 .button {
