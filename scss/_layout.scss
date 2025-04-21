@@ -53,17 +53,11 @@ footer nav {
 
 
 
-
-
-
-
-
-
 .section-container {
   display: flex;
-  width: 100vw;
-  padding-left: 125px;
-  padding-right: 125px;
+  width: calc(100vw - 250px);
+  margin: 0 auto;
+  padding: 0 20px;
   justify-content: space-between;
 }
 
@@ -77,6 +71,9 @@ footer nav {
   align-items: self-start;
   justify-content: flex-end;
 }
+
+
+
 
 
 

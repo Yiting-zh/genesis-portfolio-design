@@ -43,15 +43,18 @@ form {
 }
 
 
+
 .input-field {
-  width: 100%;
-  font-size: $font-size-p;
-  color: $text-color; 
-  opacity: 0.6;
-  font-weight: bold;
-  border: none;
-  border-bottom: 1px solid #979797; 
-  outline: none;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  }
 }
 
 
@@ -70,3 +73,5 @@ form {
   margin-bottom: $spacing-l;
   object-fit: cover;
 }
+
+

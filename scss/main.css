@@ -18,6 +18,10 @@ a {
   text-decoration: none;
   color: #111111;
 }
+a:hover {
+  text-decoration: underline;
+  color: red;
+}
 
 header {
   width: 100vw;
@@ -68,9 +72,9 @@ footer nav {
 
 .section-container, .text4, .text3, .details-pictures, .text, .text2 {
   display: flex;
-  width: 100vw;
-  padding-left: 125px;
-  padding-right: 125px;
+  width: calc(100vw - 250px);
+  margin: 0 auto;
+  padding: 0 20px;
   justify-content: space-between;
 }
 
@@ -407,14 +411,14 @@ form {
 }
 
 .input-field {
-  width: 100%;
-  font-size: 16px;
-  color: #111111;
-  opacity: 0.6;
-  font-weight: bold;
-  border: none;
-  border-bottom: 1px solid #979797;
-  outline: none;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+.input-field:hover, .input-field:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
 }
 
 .map {
@@ -437,10 +441,16 @@ form {
 
 .button {
   display: inline-block;
+  width: 125px;
+  height: 50px;
   padding: 16px 35px;
   background-color: #4A4FF2;
   color: white;
-  width: 125px;
   border: none;
-  height: 50px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.button:hover {
+  background-color: #b30024;
 }/*# sourceMappingURL=main.css.map */
