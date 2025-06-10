@@ -1,93 +1,109 @@
 @use 'variables' as *;
-@use 'global' as *;
 @use 'layout' as *;
 
 
 .text3 {
-  @extend .section-container;
-
-}
-
-.text3-left {
-  @extend .section-left;
-}
-
-.text3-left h1 {
-  font-weight: bold;
-  font-size: $font-size-h1;
-  line-height: $line-height-m;
-  margin-bottom: 30px;
-}
-
-.text3-left p {
-  font-size: $font-size-p;
-  line-height: $line-height-s;
-}
-
-.text3-right {
-  display: grid;
-  gap: 19px;
-  max-width: 335px;
-  
-}
-
-.text3-right-info {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  padding-bottom: 10px; 
-  border-bottom: 1px solid #D8D8D8; 
-  gap: 77px;
+  margin-top: $line-height-l;
+  margin-bottom: $line-height-l;
+  
+
+  &-left {
+    max-width: 50%;
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      line-height: 38px; 
+    }
+    p {
+      line-height: 1.7;
+      color: $text-color;
+    }
+  }
+
+  &-right {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+
+    &-info {
+      .right-title {
+        color: #888;
+      }
+      .right-name {
+        color: $text-color;
+      }
+    }
+  }
 }
-
-.right-title {
-  font-size: 18px;
-  font-weight: normal;
-  color: $text-color;
-  opacity: 0.5;
-}
-
-
-.right-name {
-  font-weight: bold;
-}
-
-
-
-
 
 .details-container {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  @include container-padding;
-}
-
-.details-pic {
-  width: calc(100vw - 250px);
-  height: auto;
-  margin-top: 60px;
-  margin-bottom: $spacing-l;
-  object-fit: cover;
-}
-
-.details-text {
-  @include container-padding;
-  width: 100vw;
-  height: auto;
-
-}
-
-
-.details-text p {
-  font-size: $font-size-p;
-  line-height: $line-height-s;
-  color: $text-color;
+  margin: 40px 0;
+  text-align: center;
+    margin-top: $line-height-l;
+  margin-bottom: $line-height-l;
+  .details-pic {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
 }
 
 
 .details-pictures {
-  margin-top: $spacing-l;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  margin-top: $line-height-l;
+  margin-bottom: $line-height-l;
 
-  @extend .section-container 
+  div {
+    flex: 1 1 220px;
+    max-width: 320px;
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+  }
+}
+
+
+
+// 响应式
+@media (max-width: 900px) {
+  .text3 {
+    flex-direction: column;
+    gap: 24px;
+    &-left, &-right {
+      min-width: 0;
+    }
+  }
+  .details-pictures {
+    gap: 12px;
+    div {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .details-pictures {
+    flex-direction: column;
+    gap: 8px;
+    div {
+      max-width: 100%;
+    }
+  }
+  .details-text p {
+    font-size: 1rem;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }

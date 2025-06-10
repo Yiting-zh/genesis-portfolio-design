@@ -1,18 +1,22 @@
 .button {
   display: inline-block;
-  width: 125px;
-  height: 50px;
   padding: 16px 35px;
   background-color: #4A4FF2;
-  color: white;
+  color:#fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
+  font-size: 1rem;
+  font-family: inherit;
 }
 .button:hover {
-  background-color: #b30024;
+  background-color: #2326a2; /* 主色加深版，或用你喜欢的深蓝色 */
+}
+.button:active {
+  background-color: #181a6b; /* 比 hover 更深的蓝色 */
+  transform: scale(0.97);   /* 轻微缩小，增加点击感 */
+  transition: background-color 0.2s, transform 0.1s;
 }
 
 * {
@@ -28,7 +32,6 @@ body {
   line-height: 26px;
   color: #111111;
   background-color: white;
-  margin: 0 auto;
   padding: 0;
 }
 
@@ -36,11 +39,6 @@ a {
   text-decoration: none;
   color: #111111;
 }
-a:hover {
-  text-decoration: underline;
-  color: red;
-}
-
 a:hover {
   color: #4A4FF2;
   text-decoration: underline;
@@ -135,11 +133,16 @@ footer nav {
           justify-content: flex-end;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
 @media (max-width: 1024px) {
-  .container {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+  .container { padding-left: 10px; padding-right: 10px; }
   .section-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -204,128 +207,9 @@ footer nav {
   h1 {
     font-size: 1.5rem;
   }
-  .container {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
+  .container { padding-left: 5px; padding-right: 5px; }
   .map img {
     width: 100%;
     height: auto;
-  }
-}
-.text3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 40px;
-  margin: 40px 0;
-}
-.text3-left {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-  min-width: 260px;
-}
-.text3-left h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-.text3-left p {
-  line-height: 1.7;
-  color: #111111;
-}
-.text3-right {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  min-width: 220px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 16px;
-}
-.text3-right-info {
-  margin-bottom: 8px;
-}
-.text3-right-info .right-title {
-  font-size: 0.95rem;
-  color: #888;
-}
-.text3-right-info .right-name {
-  font-size: 1.1rem;
-  color: #111111;
-}
-
-.details-container {
-  margin: 40px 0;
-  text-align: center;
-}
-.details-container .details-pic {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-          box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-}
-
-.details-text {
-  margin: 32px 0;
-}
-.details-text p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #111111;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.details-pictures {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 24px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 40px;
-}
-.details-pictures div {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 220px;
-          flex: 1 1 220px;
-  max-width: 320px;
-}
-.details-pictures div img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-}
-
-@media (max-width: 900px) {
-  .text3 {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 24px;
-  }
-  .text3-left, .text3-right {
-    min-width: 0;
-  }
-  .details-pictures {
-    gap: 12px;
-  }
-  .details-pictures div {
-    max-width: 100%;
   }
 }

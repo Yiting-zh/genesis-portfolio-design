@@ -1,10 +1,10 @@
 @use 'variables' as *;
-@use 'global' as *;
 @use 'layout' as *; 
 
 
 .text {
-  @extend .section-container;
+  margin-top: $line-height-l;
+  margin-bottom: $line-height-l;
 
 }
 
@@ -24,17 +24,18 @@
 }
 
 
-
-
-
 .text2 {
-  @extend .section-container;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: $line-height-l;
+  margin-bottom: $line-height-l;
 
 }
 
 .text2-left {
   @extend .section-left;
-  line-height: 38px;
+  line-height: 38px; 
 }
 
 .text2-right {
@@ -47,25 +48,12 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
- .container {
-  width: 100vw;
-  @include container-padding;
-}
-
 .pictures {
-  @include grid-layout(repeat(12, 1fr));
-  grid-auto-rows: calc((100vw - 250px - (11 * 30px)) / 12);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px; 
+  margin-top: $line-height-l;
+  margin-bottom: $line-height-l;
 }
 
 .pictures img {
@@ -99,37 +87,34 @@
 
 
 
-
-
-
-
-
-.grid {
-  @include container-padding;
-
-  @include grid-layout(3fr 2fr 2fr 1fr);
-  justify-content: center;
-  align-items: self-start;
+.grid-container {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr 1fr;
+  justify-content: space-between;
+  align-items: start;
+  margin-top: $line-height-l;
+  margin-bottom: $line-height-l;
+  gap: 0; // 如有需要可调整
 }
 
-.grid-info1  { grid-area: 1/1/1/2; @include border-top; }
-.grid-info8  { grid-area: 3/1/3/2; @include border-top; }
-.grid-info15 { grid-area: 4/1/4/2; @include border-bottom; }
+.grid-info1  { grid-area: 1/1/1/2; border-top: 1px solid #eee; }
+.grid-info8  { grid-area: 3/1/3/2; border-top: 1px solid #eee; }
+.grid-info15 { grid-area: 4/1/4/2; border-bottom: 1px solid #eee; }
 
-.grid-info2  { grid-area: 1/2/1/3; @include border-top; }
+.grid-info2  { grid-area: 1/2/1/3; border-top: 1px solid #eee; }
 .grid-info5  { grid-area: 2/2/2/3; }
-.grid-info9  { grid-area: 3/2/3/3; @include border-top; }
-.grid-info12 { grid-area: 4/2/4/3; @include border-bottom; }
+.grid-info9  { grid-area: 3/2/3/3; border-top: 1px solid #eee; }
+.grid-info12 { grid-area: 4/2/4/3; border-bottom: 1px solid #eee; }
 
-.grid-info3  { grid-area: 1/3/1/4; @include border-top; }
+.grid-info3  { grid-area: 1/3/1/4; border-top: 1px solid #eee; }
 .grid-info6  { grid-area: 2/3/2/4; }
-.grid-info10 { grid-area: 3/3/3/4; @include border-top; }
-.grid-info13 { grid-area: 4/3/4/4; @include border-bottom; }
+.grid-info10 { grid-area: 3/3/3/4; border-top: 1px solid #eee; }
+.grid-info13 { grid-area: 4/3/4/4; border-bottom: 1px solid #eee; }
 
-.grid-info4  { grid-area: 1/4/1/5; @include border-top; }
+.grid-info4  { grid-area: 1/4/1/5; border-top: 1px solid #eee; }
 .grid-info7  { grid-area: 2/4/2/5; }
-.grid-info11 { grid-area: 3/4/3/5; @include border-top; }
-.grid-info14 { grid-area: 4/4/4/5; @include border-bottom; }
+.grid-info11 { grid-area: 3/4/3/5; border-top: 1px solid #eee; }
+.grid-info14 { grid-area: 4/4/4/5; border-bottom: 1px solid #eee; }
 
 .grid-info-small {
   max-width: 190px;

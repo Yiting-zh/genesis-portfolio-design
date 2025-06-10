@@ -9,83 +9,87 @@
   <title>Contact me</title>
 </head>
 <body>
-
   <header>
-    <nav>
-      <div>
-        <a href="index.html"><img src="img/Logo.svg" alt="Logo"></a>
-      </div>
-      <ul>
-        <li><a href="project-details.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="header-container container">
+      <nav>
+        <div>
+          <a href="../index.html"><img src="../img/Logo.svg" alt="Logo"></a>
+        </div>
+        <ul>
+          <li><a href="../pages/project-details.html">Projects</a></li>
+          <li><a href="../pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-
-
   <main>
-    <div class="text4">
-      <div class="text4-left">
-        <h1>Full set of great
-          features to make your
-          product fresh
-        </h1>
-        <p>
-          Our favorite brands are our friends! We help them to achieve their goals, they help us to stay sharp.
-        </p>
-      </div>
+    <div class="main-container container">
+      <div class="text4">
+        <div class="section-left">
+          <h1>
+            Full set of great features to make your product fresh
+          </h1>
+          <p>
+            Our favorite brands are our friends! We help them to achieve their goals, they help us to stay sharp.
+          </p>
+        </div>
+        <div class="section-right">
+          <form>
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required class="input-field" />
 
-      <div class="text4-right">
-        <form>
-          <label for="name" >Your Name</label>
-          <input type="text" id="name" name="name" required class="input-field" />
-        
-          <label for="email" >Your Email</label>
-          <input type="email" id="email" name="email" required class="input-field" />
-        
-          <label for="message" >Your Message</label>
-          <textarea id="message" name="message" class="input-field" required></textarea>
-        
-          <button type="submit" class="button">Send</button>
-        </form>
-      </div>
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required class="input-field" />
 
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" class="input-field" required></textarea>
+
+            <button type="submit" class="button">Send</button>
+          </form>
+        </div>
+      </div>
     </div>
-
-    <div class="map"><img src="img/Map.png" alt="map"></div>
+    <div class="map container">
+      <div id="google-map"></div>
+    </div>
   </main>
 
-
-
-
-
   <footer>
-    <nav>
-      
-      <div>
-        <a href="index.html"><img src="img/Logo.svg" alt="Logo"></a>
-      </div>
-
-      <div class="links">
-
+    <div class="footer-container container">
+      <nav>
+        <div>
+          <a href="../index.html"><img src="../img/Logo.svg" alt="Logo"></a>
+        </div>
+        <div class="links">
           <ul>
-            <li><a href="project-details.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="../pages/project-details.html">Projects</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
           </ul>
-   
-  
           <ul>
-            <li><a href="#"><img src="img/dribbble-logo.svg" alt="dribbble-icon"></a></li>
-            <li><a href="#"><img src="img/instagram.svg" alt="instgram icon"></a></li>
-            <li><a href="#"><img src="img/twitter-logo-silhouette.svg" alt="twitter icon"></a></li>
+            <li><a href="#"><img src="../img/dribbble-logo.svg" alt="dribbble-icon"></a></li>
+            <li><a href="#"><img src="../img/instagram.svg" alt="instagram icon"></a></li>
+            <li><a href="#"><img src="../img/twitter-logo-silhouette.svg" alt="twitter icon"></a></li>
           </ul>
-
-      </div>
-      
-
-    </nav>
+        </div>
+      </nav>
+    </div>
   </footer>
-  
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1hk6_KNH7BAZOaXr2SwgFUA9pWrzZ9OU"></script>
+  <script>
+    function initMap() {
+      var center = { lat: 59.3293, lng: 18.0686 }; // 斯德哥尔摩
+      var map = new google.maps.Map(document.getElementById('google-map'), {
+        zoom: 14,
+        center: center
+      });
+      new google.maps.Marker({
+        position: center,
+        map: map
+      });
+    }
+    window.onload = initMap;
+  </script>
 </body>
 </html>
