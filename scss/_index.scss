@@ -30,7 +30,6 @@
   justify-content: space-between;
   margin-top: $line-height-l;
   margin-bottom: $line-height-l;
-
 }
 
 .text2-left {
@@ -94,7 +93,7 @@
   align-items: start;
   margin-top: $line-height-l;
   margin-bottom: $line-height-l;
-  gap: 0; // 如有需要可调整
+  gap: 0; 
 }
 
 .grid-info1  { grid-area: 1/1/1/2; border-top: 1px solid #eee; }
